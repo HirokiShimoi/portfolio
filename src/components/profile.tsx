@@ -1,11 +1,16 @@
 import React from 'react';
 import sampleImg from '../image/sample-ball-image.png';
 import { Grid, Typography } from '@mui/material';
-import coverImg from '../image/cover.jpg';
+import coverImg from '../image/cover_2.jpg';
 
 function Profile() {
   return (
-    <div style={{ backgroundImage: `url(${coverImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div style={{ 
+        backgroundImage: `url(${coverImg})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        height: '100vh'  // この行を追加
+    }}>
       <Grid container spacing={3} alignItems="center" style={{ padding: '20px' }}>
         {/* 画像部分 */}
         <Grid item xs={12} sm={4}>
