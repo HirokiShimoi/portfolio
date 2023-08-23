@@ -1,18 +1,17 @@
 import './App.css';
-import Header from './components/header.tsx';
-import LanguageGrid from './components/language.tsx';
-import Profile from './components/profile.tsx';
-import Works from './components/works.tsx';
+import LanguageGrid from './components/language.js';
+import Profile from './components/profile.js';
+import Works from './components/works.js';
+import Contact from './components/contact';
 
 function App() {
   return (
     <div className="App">
-      <div className='header'>
-        <Header />
-      </div>
+
       <Profile />
       <LanguageGrid />
       <Works/>
+      <Contact/>
     </div>
   );
 }
