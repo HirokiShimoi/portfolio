@@ -3,6 +3,7 @@ import { Card, CardContent, CardMedia, Typography, Grid } from '@mui/material';
 import workImg from '../image/samplework.jpg'
 import bcartImg from '../image/bcart.jpg'
 import sakesearchImg from '../image/sakesearchapp.jpg'
+import paeriaImg from '../image/paeria_hp.png'
 import { Javascript } from '@mui/icons-material';
 
 const sampleWorks = [
@@ -12,9 +13,12 @@ const sampleWorks = [
      imageUrl: bcartImg },
     { title: '自社商品検索アプリ', 
       description: 'お客様が店内の商品を探し出せるような検索アプリを開発。接客時間の短縮を目的とした業務改善の一環に繋がっています。', 
-      language: 'Javascript,React,Node.js,MongoDB,Bootstrap,AWS amplify',
+      language: 'Javascript,React,Typescript,Node.js,MongoDB,Bootstrap,AWS amplify',
       imageUrl: sakesearchImg },
-    { title: '作品2', description: '作品2の説明', imageUrl: workImg },
+    { title: 'チームパエリア　ホームページ', 
+      description: '私の嫁さんが講師をしているダンスチームのホームページです。Bootstrapの練習もかねて作成しました。', 
+      language: 'HTML CSS Javascript bootstrap ',
+      imageUrl: paeriaImg },
   ];
   
 
