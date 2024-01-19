@@ -8,6 +8,8 @@ import nodeImage from '../image/node.jpg';
 import djangoImage from '../image/django.jpg';
 import bootstrap from '../image/bootstrap.jpg';
 import sqlImg from '../image/sql.jpg';
+import AWS_logo from '../image/AWS_logo.png'
+import React_logo from '../image/React_logo.png'
 
 const languages = [
     { imgSrc: htmlImage, name: 'HTML', years: 3, comment: 'フロントエンド開発に使用' }, 
@@ -18,6 +20,8 @@ const languages = [
     {imgSrc: djangoImage, name: 'Node', years: 3, comment: 'フロントエンド開発に使用'},
     {imgSrc: bootstrap, name: 'Node', years: 3, comment: 'フロントエンド開発に使用'},
     {imgSrc: sqlImg, name: 'Node', years: 3, comment: 'フロントエンド開発に使用'},
+    {imgSrc: AWS_logo, name: 'aws', years: 1, comment: ''},
+    {imgSrc: React_logo, name: 'react', years: 1, comment: ''},
 
 ];
 
