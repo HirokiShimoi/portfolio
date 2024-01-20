@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import sampleImg from '../image/profile_photo.jpg';
 import { Grid, Typography } from '@mui/material';
 import coverImg from '../image/toppage_cover.jpg';
 import Header from './header';
+import useOnScreen from '../customhook/useOnScreen';
 
 function Profile() {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.5});
   return (
     <>
     <Header />
@@ -15,9 +17,27 @@ function Profile() {
         height: '100vh'  
     }}>
     </div>
-    <Typography variant="h3" style={{ marginTop: '60px' }}>
+    <div ref={ref} style={{animation: isVisible? 'fadeIn 3000ms ease-in-out' : 'none'}}>
+    <Typography 
+        variant="h3" 
+        sx={{
+          marginTop: '60px',
+          letterSpacing: '0.3em', // ここで文字間隔を調整
+          '@keyframes fadeIn': {
+            '0%': {
+              opacity: 0,
+              transform: 'translateY(20px)'
+            },
+            '100%': {
+              opacity: 1,
+              transform: 'translateY(0)'
+            }
+          }
+        }}
+      >
         PROFILE
     </Typography>
+    </div>
       <Grid container spacing={3} alignItems="center" style={{ padding: '20px' }}>
         {/* 画像部分 */}
         <Grid item xs={12} sm={4}>
@@ -26,7 +46,21 @@ function Profile() {
 
         {/* プロフィール部分 */}
         <Grid item xs={12} sm={8}>
-          <Typography variant="body1" style={{ fontSize: '1.2rem', lineHeight: '2'}}>
+          <Typography variant="body1" style={{ fontSize: '1.2rem', lineHeight: '2'}} sx={{
+          marginTop: '60px',
+          animation: 'fadeIn 3000ms ease-in-out',
+          letterSpacing: '0.3em', // ここで文字間隔を調整
+          '@keyframes fadeIn': {
+            '0%': {
+              opacity: 0,
+              transform: 'translateY(20px)'
+            },
+            '100%': {
+              opacity: 1,
+              transform: 'translateY(0)'
+            }
+          }
+        }}>
             1993年生まれの奈良県奈良市出身の30歳。<br />
             近畿大学経済学部を卒業したもののプロスノーボーダーになる夢を追いかけるも怪我で挫折。<br />
             飲食業界で5年間勤務した後、現在は和歌山県の酒屋に就職。<br/>
