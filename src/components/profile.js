@@ -5,6 +5,7 @@ import coverImg from '../image/toppage_cover.jpg';
 import Header from './header';
 import useOnScreen from '../customhook/useOnScreen';
 
+
 function Profile() {
   const [ref, isVisible] = useOnScreen({ threshold: 0.5});
   return (
@@ -14,9 +15,11 @@ function Profile() {
         backgroundImage: `url(${coverImg})`, 
         backgroundSize: 'cover', 
         backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         height: '100vh'  
     }}>
     </div>
+    <div className="shapedividers_com-2537"></div>
     <div ref={ref} style={{animation: isVisible? 'fadeIn 3000ms ease-in-out' : 'none'}}>
     <Typography 
         variant="h3" 
@@ -62,12 +65,16 @@ function Profile() {
           }
         }}>
             1993年生まれの奈良県奈良市出身の30歳。<br />
-            近畿大学経済学部を卒業したもののプロスノーボーダーになる夢を追いかけるも怪我で挫折。<br />
+            近畿大学経済学部総合経済政策学科を卒業。<br />プロスノーボーダーになる夢を追いかけるも怪我で挫折。<br />
             飲食業界で5年間勤務した後、現在は和歌山県の酒屋に就職。<br/>
-            趣味：プログラミング、ワイン、ウイスキーのコレクション、キノコ狩り、娘との遊び<br />
+            趣味で学んでいたプログラミングを活かし主にWeb制作を行う。<br/>
+          </Typography>
+          <Typography style={{marginTop: '20px'}}>
+          趣味：プログラミング、ワイン、ウイスキーのコレクション、キノコ狩り、娘との遊び<br />
           </Typography>
         </Grid>
       </Grid>
+      <div className='shapedividers_com-8042'></div>
       </>
   );
 }

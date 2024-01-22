@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, useTheme, useMediaQuery  } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import profile from './profile'
 
 function Header() {
     const theme = useTheme();

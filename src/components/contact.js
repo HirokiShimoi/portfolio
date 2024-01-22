@@ -1,12 +1,31 @@
 import React from 'react';
 import { TextField, Button, Typography, Container, Grid } from '@mui/material';
+import useOnScreen from '../customhook/useOnScreen';
 
 function Contact() {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.5});
   return (
     <Container>
-      <Typography variant="h3" style={{ margin: '100px 0' }}>
+      <div ref={ref} style={{animation: isVisible ? 'fadeIn 3000ms ease-in-out' : 'none',}}>
+      <Typography variant="h3" 
+                sx={{
+                marginTop: '120px',
+                marginBottom: '120px',
+                letterSpacing: '0.3em', // ここで文字間隔を調整
+                '@keyframes fadeIn': {
+                    '0%': {
+                        opacity: 0,
+                        transform: 'translateY(20px)'
+                    },
+                    '100%': {
+                        opacity: 1,
+                        transform: 'translateY(0)'
+                    }
+                }
+                }}>
         Contact 
       </Typography>
+      </div>
       <form noValidate autoComplete="off">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
